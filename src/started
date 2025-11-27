@@ -1,0 +1,1 @@
+*RLOAD %.ROMS.ARCH*.ADEasm 4*RLOAD %.ROMS.ARCH*.ADEmmu 5*LIB :*0.$.Library.BasicProg.AT_Sources.Library
