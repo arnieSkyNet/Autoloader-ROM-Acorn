@@ -31,7 +31,6 @@ Autoloader-BBC/
 ```
 
 ---
-
 ## Screenshots
 
 ![Filing System Explorer Empty](screenshots/Filing System explorer Empty.png)
