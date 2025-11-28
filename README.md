@@ -31,17 +31,18 @@ Autoloader-BBC/
 ```
 
 ---
-
 ## Screenshots
 
 Place your program snapshots in the `screenshots/` folder. Example:
 
-```markdown
-![VIEW menu screenshot](screenshots/view_menu.png)
+![VIEW menu screenshot](screenshots/view_menu.png)  
 ![Filesystem detection screenshot](screenshots/filesystem_detect.png)
-```
-
 ---
+
+- **Key points:**  
+  - Remove the triple backticks (```) around the images.  
+  - Keep the image syntax: `![Alt text](path/to/image)`.  
+  - You can add two spaces at the end of a line (`  `) to force a line break between images if needed.
 
 ## Built ROM
 
