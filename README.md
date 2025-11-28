@@ -20,6 +20,7 @@ Its primary purpose is to automatically launch the VIEW word processor when VIEW
 
 The project is organised as follows:
 
+```
 Autoloader-BBC/
 ├── src/               Source code (.ADE, include files, workspace files)
 │   ├── main/          Main program and INCLUDE tree
@@ -34,6 +35,7 @@ Autoloader-BBC/
 │   └── HISTORY.md
 ├── screenshots/       Images showing ROM behaviour
 └── README.md          Main project overview (this file)
+```
 
 ---
 
