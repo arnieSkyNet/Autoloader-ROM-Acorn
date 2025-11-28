@@ -33,10 +33,11 @@ Autoloader-BBC/
 ---
 ## Screenshots
 
-Place your program snapshots in the `screenshots/` folder. Example:
+![Filing System Explorer Empty](screenshots/Filing System explorer Empty.png)  
+![Filing System Explorer](screenshots/Filing System explorer.png)  
+![System Information](screenshots/System Information.png)  
+![View Menu](screenshots/View Menu.png)
 
-![VIEW menu screenshot](screenshots/view_menu.png)  
-![Filesystem detection screenshot](screenshots/filesystem_detect.png)
 ---
 
 - **Key points:**  
