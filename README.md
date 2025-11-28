@@ -29,12 +29,13 @@ Autoloader-BBC/
 └── README.md          Main project overview (this file)
 
 ---
+
 ## Screenshots
 
-![Filing System Explorer Empty](screenshots/Filing System explorer Empty.png)
-![Filing System Explorer](screenshots/Filing System explorer.png)
-![System Information](screenshots/System Information.png)
-![View Menu](screenshots/View Menu.png)
+![Filing System Explorer Empty](screenshots/Filing%20System%20explorer%20Empty.png)
+![Filing System Explorer](screenshots/Filing%20System%20explorer.png)
+![System Information](screenshots/System%20Information.png)
+![View Menu](screenshots/View%20Menu.png)
 
 ## Built ROM
 
