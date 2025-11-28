@@ -57,19 +57,60 @@ rom/autoloader.rom
 
 This project can be built on a real BBC Micro or emulator using ADE (Advanced Disk Editor).
 
-### Requirements
-- ADE assembler and emulator ROMs:
-  - `ADEasm`
-  - `ADEmmu`
-- The ADE Library (usually found in: `$.Library.BasicProg.AT_Sources.Library`)
-- All source files present in the `src/` directory
+### Required ADE ROMs
 
-### Step 1 — Load ADE support modules
-Load the ADE assembler and emulator modules into sideways RAM:
+To build this project on a BBC Micro, you will need:
 
-*RLOAD %.ROMS.ARCH*.ADEasm 4
-*RLOAD %.ROMS.ARCH*.ADEmmu 5
-*LIB :*0.$.Library.BasicProg.AT_Sources.Library
+- `ADEasm` – ADE assembler ROM
+- `ADEmmu` – ADE MMU ROM
+
+You can find them in the [TobyLobster ROM Library](https://tobylobster.github.io/rom_library/). Search for `ADEasm` or `ADEmmu` to download the appropriate image.
+
+### Step 1 — Load ADE ROMs into Sideways RAM (Classic Method)
+
+On a BBC Master (or compatible machine with sideways RAM), you can load ROM images manually into slots using the “inconvenient” standard method:
+
+1. **Insert the disc containing the ADE ROM images** (ADEasm, ADEmmu).  
+
+2. **Choose a free sideways slot** — e.g., 4 for ADEasm, 5 for ADEmmu.  
+
+3. **Load the ROM into memory**:
+
+```
+*LOAD ADEasm 8000
+*LOAD ADEmmu 8000
+```
+
+- `8000` is the start address in sideways RAM.  
+- The ROM is loaded into memory but not yet active.
+
+4. **Initialise the ROMs**:
+
+- Activate the ROMs in their slots:
+
+```
+*SWITCH 4
+*SWITCH 5
+```
+
+- Alternatively, on some Masters, **press <Ctrl> + Break** to initialise the newly loaded ROMs.  
+
+5. **Verify loaded ROMs** (optional):
+
+```
+*FX 4
+*FX 5
+```
+
+- This will list the contents of the selected sideways slots. ADEasm and ADEmmu should appear.  
+
+> ⚠️ Notes:
+> - You must manually track which slots are free to avoid conflicts.  
+> - This method is slower and less convenient than using an automated loader, but it works on any Master without extra helper code.  
+
+---
+
+
 
 ### Step 2 — Change to the source directory
 Navigate to the folder containing the AUTOLAUNCH wrapper and source:
