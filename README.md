@@ -20,12 +20,11 @@ Its primary purpose is to automatically launch the VIEW word processor when VIEW
 
 The project is organised as follows:
 
-```
 Autoloader-BBC/
-├── src/               Source code (.ADE, include files, workspace files)
-├── rom/               Compiled ROM images (built output)
-├── docs/              Additional documentation
-├── screenshots/       Images showing ROM behaviour
+├── src/               Source code (.ADE, include files, workspace files)  
+├── rom/               Compiled ROM images (built output)  
+├── docs/              Additional documentation  
+├── screenshots/       Images showing ROM behaviour  
 └── README.md          Main project overview (this file)
 
 ---
@@ -37,6 +36,7 @@ Autoloader-BBC/
 ![System Information](screenshots/SystemInformation.png)  
 ![View Menu](screenshots/ViewMenu.png)
 
+---
 
 ## Built ROM
 
@@ -56,19 +56,17 @@ This project can be built on a real BBC Micro or emulator using ADE (Advanced Di
 
 To build this project on a BBC Micro, you will need:
 
-- `ADEasm` – ADE assembler ROM
-- `ADEmmu` – ADE MMU ROM
+- `ADEasm` – ADE assembler ROM  
+- `ADEmmu` – ADE MMU ROM  
 
 You can find them in the [TobyLobster ROM Library](https://tobylobster.github.io/rom_library/?md5=3500b9c6409477fcaeb70c20a41061cd). Search for `ADEasm` or `ADEmmu` to download the appropriate image.
 
 ### Step 1 — Load ADE ROMs into Sideways RAM (Classic Method)
 
-On a BBC Master (or compatible machine with sideways RAM), you can load ROM images manually into slots using the “inconvenient” standard method:
+On a BBC Master (or compatible machine with sideways RAM), you can load ROM images manually into slots using the standard method:
 
 1. **Insert the disc containing the ADE ROM images** (ADEasm, ADEmmu).  
-
 2. **Choose a free sideways slot** — e.g., 4 for ADEasm, 5 for ADEmmu.  
-
 3. **Load the ROM into memory**:
 
 ```
@@ -81,14 +79,12 @@ On a BBC Master (or compatible machine with sideways RAM), you can load ROM imag
 
 4. **Initialise the ROMs**:
 
-- Activate the ROMs in their slots:
-
 ```
 *SWITCH 4
 *SWITCH 5
 ```
 
-- Alternatively, on some Masters, **press <Ctrl> + Break** to initialise the newly loaded ROMs.  
+- Alternatively, on some Masters, press `<Ctrl> + Break` to initialise the newly loaded ROMs.  
 
 5. **Verify loaded ROMs** (optional):
 
@@ -97,33 +93,41 @@ On a BBC Master (or compatible machine with sideways RAM), you can load ROM imag
 *FX 5
 ```
 
-- This will list the contents of the selected sideways slots. ADEasm and ADEmmu should appear.  
+- ADEasm and ADEmmu should appear.
 
 > ⚠️ Notes:
-> - You must manually track which slots are free to avoid conflicts.  
-> - This method is slower and less convenient than using an automated loader, but it works on any Master without extra helper code.  
+> - Track which slots are free to avoid conflicts.  
+> - This method is slower but works on any Master without helper code.  
 
 ---
 
-
-
 ### Step 2 — Change to the source directory
+
 Navigate to the folder containing the AUTOLAUNCH wrapper and source:
 
+```
 *DIR <your-source-directory>
+```
+
+---
 
 ### Step 3 — Assemble the ROM
+
 Run ADE with the AUTOLAUNCH wrapper file:
 
+```
 *ASM AUTOLAUNCH
+```
+
+---
 
 ### Step 4 — Output ROM
-ADE will assemble starting at &8000.
-If AUTOLAUNCH contains a SAVE statement, the ROM will be written automatically.
 
-Otherwise, save manually:
+ADE will assemble starting at &8000. If AUTOLAUNCH contains a SAVE statement, the ROM will be written automatically. Otherwise, save manually:
 
+```
 *SAVE AUTOLOADER &8000 &BFFF
+```
 
 This creates a ROM image suitable for a sideways ROM socket or emulator.
 
@@ -134,40 +138,41 @@ This creates a ROM image suitable for a sideways ROM socket or emulator.
 This project can also be assembled using the modern BeebAsm assembler.
 
 ### Requirements
+
 Install BeebAsm:
 
-Windows:
-  Download binary from: https://github.com/stardot/beebasm/releases
-
-Linux / macOS:
+- **Windows:** Download binary from [BeebAsm releases](https://github.com/stardot/beebasm/releases)  
+- **Linux/macOS:**  
+  ```
   git clone https://github.com/stardot/beebasm
   make
+  ```
 
 ### Step 1 — Go to the project folder
 
+```
 cd Autoloader-BBC
+```
 
 ### Step 2 — Assemble the ROM
 
+```
 beebasm -i src/main/autoloader_main.asm -o rom/Autoloader.rom -v
+```
 
-(You can replace the input path with your actual main source file.)
+(Replace the input path with your actual main source file if needed.)
 
 ### Step 3 — Load the ROM in an emulator
 
-BeebEm:
-  File → Load ROM → choose rom/Autoloader.rom → Slot 4
+- **BeebEm:** File → Load ROM → choose `rom/Autoloader.rom` → Slot 4  
+- **B-Em:** Hardware → Load ROM → select slot → choose `rom/Autoloader.rom`  
 
-B-Em:
-  Hardware → Load ROM → select slot → choose rom/Autoloader.rom
-
-### Notes
-- INCLUDE paths may need adjusting for BeebAsm (uses `.include "file"` syntax)
-- Workspace definitions may need slight conversion
-- All logic, routines, and labels will assemble identically once syntax updates are made
+> Notes:  
+> - INCLUDE paths may need adjusting for BeebAsm (`.include "file"` syntax)  
+> - Workspace definitions may need slight conversion  
+> - Logic, routines, and labels will assemble identically once syntax updates are made  
 
 ---
-
 
 ## License
 
