@@ -1,0 +1,10 @@
+; AUTOLAUNCH.ADE
+; Wrapper file used by ADE to assemble the ROM image.
+; This file exists only to give ADE a single entry point.
+
+ORG &8000
+MSW &FFFF
+
+INCLUDE "AUTOMAIN"
+
+END
