@@ -64,7 +64,7 @@ To build this project on a BBC Micro, you will need:
 - `ADEasm` – ADE assembler ROM
 - `ADEmmu` – ADE MMU ROM
 
-You can find them in the [TobyLobster ROM Library](https://tobylobster.github.io/rom_library/). Search for `ADEasm` or `ADEmmu` to download the appropriate image.
+You can find them in the [TobyLobster ROM Library](https://tobylobster.github.io/rom_library/?md5=3500b9c6409477fcaeb70c20a41061cd). Search for `ADEasm` or `ADEmmu` to download the appropriate image.
 
 ### Step 1 — Load ADE ROMs into Sideways RAM (Classic Method)
 
