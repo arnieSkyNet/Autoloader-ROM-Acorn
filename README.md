@@ -28,8 +28,6 @@ Autoloader-BBC/
 ├── screenshots/       Images showing ROM behaviour
 └── README.md          Main project overview (this file)
 
-```
-
 ---
 ## Screenshots
 
