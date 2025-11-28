@@ -23,18 +23,11 @@ The project is organised as follows:
 ```
 Autoloader-BBC/
 ├── src/               Source code (.ADE, include files, workspace files)
-│   ├── main/          Main program and INCLUDE tree
-│   ├── include/       Subroutine files included by main
-│   ├── ade/           ADE support files (if applicable)
-│   └── library/       Any ADE or BBC BASIC library files needed for build
 ├── rom/               Compiled ROM images (built output)
 ├── docs/              Additional documentation
-│   ├── FEATURES.md
-│   ├── BUILD.md
-│   ├── COMMANDS.md
-│   └── HISTORY.md
 ├── screenshots/       Images showing ROM behaviour
 └── README.md          Main project overview (this file)
+
 ```
 
 ---
