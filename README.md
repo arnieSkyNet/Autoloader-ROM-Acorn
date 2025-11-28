@@ -31,18 +31,13 @@ Autoloader-BBC/
 ```
 
 ---
+
 ## Screenshots
 
 ![Filing System Explorer Empty](screenshots/Filing System explorer Empty.png)
 ![Filing System Explorer](screenshots/Filing System explorer.png)
 ![System Information](screenshots/System Information.png)
 ![View Menu](screenshots/View Menu.png)
-
-
-- **Key points:**  
-  - Remove the triple backticks (```) around the images.  
-  - Keep the image syntax: `![Alt text](path/to/image)`.  
-  - You can add two spaces at the end of a line (`  `) to force a line break between images if needed.
 
 ## Built ROM
 
