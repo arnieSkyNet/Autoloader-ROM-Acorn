@@ -32,10 +32,11 @@ Autoloader-BBC/
 
 ## Screenshots
 
-![Filing System Explorer Empty](screenshots/Filing%20System%20explorer%20Empty.png)
-![Filing System Explorer](screenshots/Filing%20System%20explorer.png)
-![System Information](screenshots/System%20Information.png)
+![Filing System Explorer Empty](screenshots/Filing%20System%20explorer%20Empty.png)  
+![Filing System Explorer](screenshots/Filing%20System%20explorer.png)  
+![System Information](screenshots/System%20Information.png)  
 ![View Menu](screenshots/View%20Menu.png)
+
 
 ## Built ROM
 
