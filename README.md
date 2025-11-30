@@ -165,9 +165,7 @@ beebasm -i src/main/autoloader_main.asm -o rom/Autoloader.rom -v
 ### Step 3 — Load the ROM in an emulator
 
 - **BeebEm:** File → Load ROM → choose `rom/Autoloader.rom` → Slot 4  
-- **B-Em:**[B-Em](https://github.com/stardot/b-em) → Hardware → Load ROM → select slot → choose rom/Autoloader.rom
-
-- **B-Em:** Hardware → Load ROM → select slot → choose `rom/Autoloader.rom`  
+- [**B-Em:** ](https://github.com/stardot/b-em) → Hardware → Load ROM → select slot → choose rom/Autoloader.rom
 
 > Notes:  
 > - INCLUDE paths may need adjusting for BeebAsm (`.include "file"` syntax)  
